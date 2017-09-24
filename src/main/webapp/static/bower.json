@@ -1,0 +1,13 @@
+{
+  "name": "app",
+  "authors": [
+    "Przemysław Szczerba <przemyslawszczerba@interia.pl>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.6.5"
+  }
+}

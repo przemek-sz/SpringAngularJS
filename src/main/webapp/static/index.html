@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Tytół</title>
+
+</head>
+<body>
+
+<div ng-controller="UserController as userController">
+
+    <form>
+        <input type="text" ng-model="userController.user.firstName" placeholder="Name"><br>
+        <input type="text" ng-model="userController.user.lastName" placeholder="LastName"><br>
+        <input type="text" ng-model="userController.user.email" placeholder="Email"><br>
+        <button ng-click="userController.addUser(userController.user)">Dodaj</button>
+
+
+    </form>
+
+    <!--<form>
+        <input type="text" ng-model="userController.use.firstName" placeholder="Name"><br>
+        <input type="text" ng-model="userController.use.lastName" placeholder="LastName"><br>
+        <input type="text" ng-model="userController.use.email" placeholder="Email"><br>
+        <button ng-click="userController.updateUser(use)">Edytuj</button>
+    </form>-->
+    <ul>
+
+        <li ng-repeat="us in userController.users">
+            {{us.id}}-{{us.firstName}}-{{us.lastName}}-{{us.email}} <button ng-click="userController.removeUser(us)">Usun</button>  <button ng-click="userController.updateUser(userController.user,us)">Edytuj</button>
+        </li>
+
+    </ul>
+
+</div>
+
+<script src="static/lib/angular/angular.js"></script>
+<script src="static/app/app.js"></script>
+</body>
+</html>
